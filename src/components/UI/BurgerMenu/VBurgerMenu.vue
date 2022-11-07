@@ -1,22 +1,23 @@
 <template>
-  <div class="burgerMenu">
+  <div :class="burger === false ? 'burgerMenu' : 'burgerMenu active'">
     <div
       @click="activeBurger"
-      :class="burger === false ? 'burgerMenu_burger' : 'burgerMenu_burger active'"
+      class="burgerMenu_burger"
     >
       <div
-        :class="
-          burger === false ? 'burgerMenu-burger_line' : 'burgerMenu-burger_line active'
-        "
+        class='burgerMenu-burger_line'
+  
       ></div>
     </div>
-    <div :class="burger === false ? 'burgerMenu_menu' : 'burgerMenu_menu active'">
+    <div class='burgerMenu_menu'>
       <div
-        :class="
-          burger === false ? 'burgerMenu-menu_aside' : 'burgerMenu-menu_aside active'
-        "
+        class=
+        'burgerMenu-menu_aside'
+      
       >
         <slot></slot>
+      </div>
+      <div  @click="activeBurger"  class="burgerMenu_body">
       </div>
     </div>
   </div>
@@ -38,36 +39,64 @@ const activeBurger = () => {
 <style lang="scss" scoped>
 
 .burgerMenu {
+
+&.active{
+  .burgerMenu_menu{
+  visibility: visible;
+  opacity: 1;
+  }
+  .burgerMenu-menu_aside{
+    transform: translateX(0%);
+  }
+  .burgerMenu_burger{
+    &::before {
+        transform: rotate(50deg);
+        top: 10px;
+      }
+      &::after {
+        transform: rotate(-50deg);
+        bottom: 9px;
+      }
+  }
+  .burgerMenu-burger_line{
+    transform: translateX(-100%);
+  }
+  .burgerMenu_body{
+    transform: translateX(-0%);
+  }
+}
+
   &_menu {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(black, 0.5);
+    display: flex;
     left: 0;
     top: 0;
     z-index: 700;
     visibility: hidden;
     opacity: 0;
     transition: all ease 0.4s;
-    &.active {
-      visibility: visible;
-      opacity: 1;
-    }
+    
   }
 
+  &_body{
+    width: 0;
+    height: 100vh;
+    background-color: rgba(black,0.5);
+    transition: all linear 0.4s;
+    transform: translateX(-100%);
+  }
   &-menu {
     &_aside {
       height: 100%;
       width: 100%;
       background-color: rgb(11, 10, 10);
       transform: translateX(-100%);
-      transition: all ease 0.4s;
+      transition: all linear 0.4s;
       overflow: auto;
       padding-bottom: 50px;
       color: white;
-      &.active {
-        transform: translateX(0%);
-      }
     }
   }
   &_burger {
@@ -97,16 +126,7 @@ const activeBurger = () => {
     &::after {
       bottom: 0;
     }
-    &.active {
-      &::before {
-        transform: rotate(50deg);
-        top: 10px;
-      }
-      &::after {
-        transform: rotate(-50deg);
-        bottom: 9px;
-      }
-    }
+    
   }
 
   &-burger {
@@ -117,14 +137,15 @@ const activeBurger = () => {
       height: 2px;
       background-color: white;
       transition: all ease 0.4s;
-      &.active {
-        transform: translateX(-100%);
-      }
+    
     }
   }
 }
 @media (min-width: 776px) {
   .burgerMenu {
+    &_body{
+      width: 60%;
+    }
     &-menu {
       &_aside {
         width: 40%;

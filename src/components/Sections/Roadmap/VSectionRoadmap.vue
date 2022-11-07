@@ -19,7 +19,7 @@
             :speed="600"
             :breakpoints="{
               300: {
-                slidesPerView: 1.4,
+                slidesPerView: 1.5,
               },
               400: {
                 slidesPerView: 1.7,

@@ -22,7 +22,9 @@
         </ul>
       </div>
     </VContainer>
-    <VBurgerMenu>Hello</VBurgerMenu>
+    <VBurgerMenu>
+    <BaseHeaderRespMenu :data-link="data" :data-social="dataSocial"/>
+    </VBurgerMenu>
   </div>
 </template>
 
@@ -31,6 +33,7 @@ import VContainer from '../UI/Container/VContainer.vue';
 import Logo from '../Image/Logo.png';
 import Svg from '../UI/SVG/VSvg.vue';
 import VBurgerMenu from '../UI/BurgerMenu/VBurgerMenu.vue';
+import BaseHeaderRespMenu from './BaseHeaderRespMenu.vue';
 const data = [
   {id: 0, title: 'home'},
   {id: 1, title: 'sequoia'},
@@ -113,8 +116,8 @@ const dataSocial = [
     }
 
     &_nav {
+     
       display: contents;
-      
     }
   }
 }
