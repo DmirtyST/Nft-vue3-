@@ -47,6 +47,7 @@ const activeBurger = () => {
   }
   .burgerMenu-menu_aside{
     transform: translateX(0%);
+    opacity: 1;
   }
   .burgerMenu_burger{
     &::before {
@@ -59,7 +60,7 @@ const activeBurger = () => {
       }
   }
   .burgerMenu-burger_line{
-    transform: translateX(-100%);
+    transform: translateX(-110%);
   }
   .burgerMenu_body{
     transform: translateX(-0%);
@@ -86,6 +87,7 @@ const activeBurger = () => {
     background-color: rgba(black,0.5);
     transition: all linear 0.4s;
     transform: translateX(-100%);
+    display: none;
   }
   &-menu {
     &_aside {
@@ -93,10 +95,11 @@ const activeBurger = () => {
       width: 100%;
       background-color: rgb(11, 10, 10);
       transform: translateX(-100%);
-      transition: all linear 0.4s;
+      transition: all ease 0.4s;
       overflow: auto;
       padding-bottom: 50px;
       color: white;
+      opacity: 0;
     }
   }
   &_burger {
@@ -145,9 +148,11 @@ const activeBurger = () => {
   .burgerMenu {
     &_body{
       width: 60%;
+      display: unset;
     }
     &-menu {
       &_aside {
+        transition: all linear .4s;
         width: 40%;
       }
     }

@@ -34,6 +34,7 @@ import Logo from '../Image/Logo.png';
 import Svg from '../UI/SVG/VSvg.vue';
 import VBurgerMenu from '../UI/BurgerMenu/VBurgerMenu.vue';
 import BaseHeaderRespMenu from './BaseHeaderRespMenu.vue';
+
 const data = [
   {id: 0, title: 'home'},
   {id: 1, title: 'sequoia'},

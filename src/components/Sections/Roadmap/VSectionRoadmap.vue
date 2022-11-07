@@ -22,13 +22,13 @@
                 slidesPerView: 1.5,
               },
               400: {
-                slidesPerView: 1.7,
+                slidesPerView: 2.2,
               },
               600: {
-                slidesPerView: 2.5,
+                slidesPerView: 2.8,
               },
               800: {
-                slidesPerView: 3.4,
+                slidesPerView: 3.2,
               },
               1000: {
                 slidesPerView: 4.3,

@@ -12,13 +12,11 @@
         <ul class="headerRespMenu_links">
         <li class="headerRespMenu-links_list" v-for="item in dataLink" :key="item.id">
         <a class="headerRespMenu-links_link" href="">{{item.title}}</a>
-        
-       
         </li>
         </ul>
         <ul class="headerRespMenu_social">
         <li v-for="item in dataSocial" :key="item.id">
-        <VSvg :id="item.name" :width="item.w" :height="item.h"/>
+        <VSvg  :id="item.name" :width="item.w" :height="item.h"/>
         </li>
         </ul>
     </nav>
@@ -37,6 +35,7 @@ const props = defineProps({
     type:Array,
     required:false
     }
+
 })
 </script>
 
@@ -93,6 +92,10 @@ const props = defineProps({
         &_link{
             color: #ffffff;
             font-size: 25px;
+            transition: all  linear .4s;
+            &:hover{
+                color: #c2e978;
+            }
         }
     }
     &_social{
