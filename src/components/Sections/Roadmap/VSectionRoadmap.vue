@@ -39,6 +39,7 @@
               1550: {
                 slidesPerView: 5.6,
               },
+              
             }"
             :autoplay="{
               delay: 2500,
@@ -191,16 +192,12 @@ const dataSlider = [
     &_slide {
     min-height: auto;
     height: 250px;
-   
-    
     padding: 37px 15px;
     display: flex;
     flex-direction: column;
-   
     gap: 10px;
     transition: all ease 0.4s;
-    position: relative;
-    z-index: 1;
+   
    
   }
   }
@@ -226,7 +223,7 @@ const dataSlider = [
 @media (min-width: 1550px) {
   .roadmap {
     &_slider {
-      width: 130%;
+      width: 140%;
       height: auto;
     }
   }

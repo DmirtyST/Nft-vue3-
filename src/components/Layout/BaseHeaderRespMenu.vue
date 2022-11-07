@@ -11,7 +11,7 @@
         </div>
         <ul class="headerRespMenu_links">
         <li class="headerRespMenu-links_list" v-for="item in dataLink" :key="item.id">
-        <a class="headerRespMenu-links_link" href="">{{item.title}}</a>
+        <a class="headerRespMenu-links_link" href="#">{{item.title}}</a>
         </li>
         </ul>
         <ul class="headerRespMenu_social">
