@@ -186,6 +186,26 @@ const dataSlider = [
     z-index: -1;
   }
 }
+@media (max-width:400px) {
+  .roadmap{
+    &_slide {
+    min-height: auto;
+    height: 250px;
+   
+    
+    padding: 37px 15px;
+    display: flex;
+    flex-direction: column;
+   
+    gap: 10px;
+    transition: all ease 0.4s;
+    position: relative;
+    z-index: 1;
+   
+  }
+  }
+}
+
 @media (max-width: 800px) {
   .wrapper {
     margin-bottom: 50px;
