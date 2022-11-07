@@ -1,0 +1,9 @@
+@import './reset.scss';
+@import './color.scss';
+@import './fonts.scss';
+body{
+font-family: StoneSoup,PlayfairDisplay;
+overflow-x: hidden;
+background: linear-gradient(0deg, #000000, #000000), #15151C;
+color: black;
+}
