@@ -98,6 +98,8 @@ const props = defineProps({
     &_link {
       color: #ffffff;
       font-size: 25px;
+      position: relative;
+      z-index: 22;
       transition: all linear 0.4s;
       &:hover {
         color: #c2e978;
