@@ -173,6 +173,15 @@ import VSectionScreenAnimate from './VSectionScreenAnimate.vue';
     }
   }
 }
+@media (max-width: 600px) {
+  .screen {
+    &-row {
+      &_img {
+        object-position: top left;
+      }
+    }
+  }
+}
 @media (max-width: 425px) {
   .screen {
     &-description {
