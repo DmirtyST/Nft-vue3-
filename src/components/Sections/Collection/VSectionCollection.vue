@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <section class="collection_row">
+      <div class="collection_row">
         <div
           v-for="item in dataItem"
           :key="item.id"
@@ -41,7 +41,7 @@
             </div>
           </VContainer>
         </div>
-      </section>
+      </div>
 
       <div class="collection_basement">
         <VTypography size="md">Coming soon on OpenSea.com</VTypography>
