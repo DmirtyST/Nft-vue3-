@@ -17,7 +17,7 @@
           </VHtag>
         </div>
         <div class="price_itemCalc">
-          <img class="price-itemCalc_rounded" :src="priceRounded" alt="" />
+          <img class="price-itemCalc_rounded" :src="priceRounded" alt="image-price" />
           <div class="price-itemCalc_title">1.5 * 1 hectare * plot area</div>
           <div class="price-itemCalc_line"></div>
 

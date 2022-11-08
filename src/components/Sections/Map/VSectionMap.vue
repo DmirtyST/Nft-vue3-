@@ -1,6 +1,6 @@
 <template>
   <section class="sectionMap">
-    <img class="sectionMap_img" :src="SectionMapBg" alt="" />
+    <img class="sectionMap_img" :src="SectionMapBg" alt="image-map" />
     <VSectionMapAnimation />
     <VContainer width="950">
       <div class="sectionMap_row">

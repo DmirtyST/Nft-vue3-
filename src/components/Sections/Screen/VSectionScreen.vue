@@ -1,7 +1,7 @@
 <template>
   <section id="#home" class="screen">
     <div class="screen_row">
-      <img class="screen-row_img" :src="screenBg" alt="" />
+      <img class="screen-row_img" :src="screenBg" alt="bg-home" />
       <VSectionScreenAnimate />
       <VContainer width="950">
         <div class="screen_item">

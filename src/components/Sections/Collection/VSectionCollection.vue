@@ -3,7 +3,11 @@
     <VContainer width="1128">
       <div class="collection_preview">
         <div class="collection-preview_title">
-          <img class="collection-preview_image" :src="collectionRounded" alt="" />
+          <img
+            class="collection-preview_image"
+            :src="collectionRounded"
+            alt="img-collention"
+          />
           <VHtag size="xl" size-sub="xl">
             classic nft
             <template v-slot:span

@@ -4,7 +4,7 @@
       <div class="banner_row">
         <div class="banner_eclipse"></div>
         <div class="banner_title">
-          <img class="banner-title_rounded" :src="Rounded" alt="" />
+          <img class="banner-title_rounded" :src="Rounded" alt="banner-img" />
           <VHtag size="xl" size-sub="xl">
             The sequoia is a very rare,
             <template v-slot:span><span>endangered plant</span></template>

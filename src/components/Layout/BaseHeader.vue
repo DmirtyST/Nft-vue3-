@@ -5,7 +5,7 @@
         <div class="header_box">
           <div class="header_logo">
             <router-link to="/">
-              <img :src="Logo" alt="Logo" />
+              <img :src="Logo" alt="SequoiaNft" />
               ></router-link
             >
           </div>

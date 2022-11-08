@@ -6,7 +6,7 @@
     <div class="benefits_row">
       <div v-for="item in dataItem" :key="item.id" class="benefits_item">
         <div class="benefits-item_image">
-          <img :src="item.img" alt="" />
+          <img :src="item.img" alt="img-benefist" />
         </div>
         <VTypography size="md">{{ item.text }}</VTypography>
       </div>

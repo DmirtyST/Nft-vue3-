@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <img class="roadmap_image" :src="roadMapBg" alt="" />
+    <img class="roadmap_image" :src="roadMapBg" alt="image" />
 
     <VContainer width="1128">
       <section class="roadmap">

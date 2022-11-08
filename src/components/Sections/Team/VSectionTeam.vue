@@ -7,7 +7,7 @@
       <div class="team_row">
         <div v-for="item in dataItem" :key="item.id" class="team_item">
           <div :style="{'background-color': item.color}" class="team-item_eclipse">
-            <img class="team-item_img" :src="item.img" alt="" />
+            <img class="team-item_img" :src="item.img" alt="team-profile" />
           </div>
           <div class="team-item_title">{{ item.title }}</div>
           <div class="team-item_text">{{ item.desc }}</div>
