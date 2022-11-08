@@ -207,7 +207,6 @@ const dataItem = [
     &_row {
       display: flex;
       flex-direction: column;
-      margin-bottom: 24px;
     }
     &_item {
       min-height: 310px;

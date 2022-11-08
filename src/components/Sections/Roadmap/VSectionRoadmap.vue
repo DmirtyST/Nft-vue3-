@@ -39,7 +39,6 @@
               1550: {
                 slidesPerView: 5.6,
               },
-              
             }"
             :autoplay="{
               delay: 2500,
@@ -132,10 +131,10 @@ const dataSlider = [
   }
 
   &_slide {
-    min-height: 240px;
+    height: 240px;
     max-width: 274px;
     background: #171b2b;
-    padding: 37px 24px;
+    padding: 37px 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -185,21 +184,6 @@ const dataSlider = [
     top: -110px;
     left: -15px;
     z-index: -1;
-  }
-}
-@media (max-width:400px) {
-  .roadmap{
-    &_slide {
-    min-height: auto;
-    height: 250px;
-    padding: 37px 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    transition: all ease 0.4s;
-   
-   
-  }
   }
 }
 

@@ -103,7 +103,6 @@ import VTypography from '../../UI/Typography/VTypography.vue';
     &_row {
       display: flex;
       flex-direction: column;
-
       gap: 20px;
     }
   }

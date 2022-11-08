@@ -153,11 +153,8 @@ import BannerImg from '../../Image/bannerImage.png';
       img {
         top: -0;
         left: 40px;
-        position: absolute;
         width: 250px;
         height: 320px;
-        max-width: unset;
-        z-index: 22;
       }
     }
   }

@@ -122,12 +122,8 @@ const dataItem = [
 
 @media (max-width: 1200px) {
   .team {
-    min-height: 450px;
-
     &_row {
-      display: grid;
       grid-template-columns: repeat(3, 1fr);
-
       gap: 10px;
     }
   }
@@ -135,9 +131,7 @@ const dataItem = [
 
 @media (max-width: 776px) {
   .team {
-    min-height: 450px;
     &_row {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -145,9 +139,7 @@ const dataItem = [
 
 @media (max-width: 535px) {
   .team {
-    min-height: 450px;
     &_row {
-      display: grid;
       grid-template-columns: repeat(1, 1fr);
     }
   }

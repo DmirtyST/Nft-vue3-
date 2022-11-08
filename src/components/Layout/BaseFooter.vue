@@ -12,9 +12,11 @@
           <img :src="footerImg" alt="image" />
         </div>
         <ul class="footer_icons">
-          <li><VSvg id="twitter" width="56" height="56" /></li>
-          <li><VSvg id="facebook" width="56" height="56" /></li>
-          <li><VSvg id="instagram" width="56" height="56" /></li>
+          <li v-for="item in dataSocial" :key="item.id">
+            <a href="#">
+              <VSvg class="footer_svg" :width="item.w" :height="item.h" :id="item.icon" />
+            </a>
+          </li>
         </ul>
       </div>
     </VContainer>
@@ -27,6 +29,11 @@ import VContainer from '../UI/Container/VContainer.vue';
 import VHtag from '../UI/Htag/VHtag.vue';
 import VSvg from '../UI/SVG/VSvg.vue';
 import footerImg from '../Image/footerImg.png';
+const dataSocial = [
+  {id: 1, w: '56', h: '56', icon: 'twitter'},
+  {id: 2, w: '56', h: '56', icon: 'facebook'},
+  {id: 3, w: '56', h: '56', icon: 'instagram'},
+];
 </script>
 
 <style lang="scss" scoped>
@@ -53,6 +60,13 @@ import footerImg from '../Image/footerImg.png';
     display: flex;
     align-items: center;
     gap: 64px;
+  }
+  &_svg {
+    transition: linear 0.4s all;
+    &:hover {
+      opacity: 0.6;
+      transition: linear 0.4s all;
+    }
   }
   &_sub {
     font-size: 17px;

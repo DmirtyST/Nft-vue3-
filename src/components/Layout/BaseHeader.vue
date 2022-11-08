@@ -4,7 +4,10 @@
       <div class="header_row">
         <div class="header_box">
           <div class="header_logo">
-            <img :src="Logo" alt="Logo" />
+            <router-link to="/">
+              <img :src="Logo" alt="Logo" />
+              ></router-link
+            >
           </div>
           <nav class="header_nav">
             <ul class="header_lists">
@@ -17,13 +20,19 @@
 
         <ul class="header_social">
           <li v-for="item in dataSocial" :key="item.id">
-            <Svg class="svg" :id="item.name" :width="item.w" :height="item.h" />
+            <a href="#">
+              <Svg class="header_svg" :id="item.name" :width="item.w" :height="item.h"
+            /></a>
           </li>
         </ul>
       </div>
     </VContainer>
-    <VBurgerMenu>
-    <BaseHeaderRespMenu :data-link="data" :data-social="dataSocial"/>
+    <VBurgerMenu :burger="burger" :activeBurger="activeBurger">
+      <BaseHeaderRespMenu
+        :activeBurger="activeBurger"
+        :data-link="data"
+        :data-social="dataSocial"
+      />
     </VBurgerMenu>
   </div>
 </template>
@@ -34,7 +43,16 @@ import Logo from '../Image/Logo.png';
 import Svg from '../UI/SVG/VSvg.vue';
 import VBurgerMenu from '../UI/BurgerMenu/VBurgerMenu.vue';
 import BaseHeaderRespMenu from './BaseHeaderRespMenu.vue';
-
+import {ref} from 'vue';
+const burger = ref(false);
+const activeBurger = () => {
+  burger.value = !burger.value;
+  if (burger.value === true) {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflowY = 'auto';
+  }
+};
 const data = [
   {id: 0, title: 'home'},
   {id: 1, title: 'sequoia'},
@@ -74,13 +92,23 @@ const dataSocial = [
     display: flex;
     gap: 24px;
   }
-  &_list {
-  }
 
   &_link {
     color: #ffffff;
+    transition: all linear 0.4s;
+    &:hover {
+      color: #c2e978;
+    }
   }
-
+  &_svg {
+    transition: all ease 0.4s;
+    fill: #e5e5e5;
+    &:hover {
+      fill: #c2e978;
+      transition: all ease 0.4s;
+      transform: scale(1.2);
+    }
+  }
   &_logo {
     width: 64px;
     height: 64px;
@@ -117,7 +145,6 @@ const dataSocial = [
     }
 
     &_nav {
-     
       display: contents;
     }
   }

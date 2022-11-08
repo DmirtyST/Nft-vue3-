@@ -65,7 +65,7 @@ import VSectionMapAnimation from './VSectionMapAnimation.vue';
 
     img {
       position: absolute;
-      max-width: max-content;
+      max-width: unset;
       top: -70px;
       left: -120px;
       height: 540px;
@@ -107,7 +107,6 @@ import VSectionMapAnimation from './VSectionMapAnimation.vue';
     &_row {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
       padding: 10px 0;
     }
 
@@ -117,8 +116,6 @@ import VSectionMapAnimation from './VSectionMapAnimation.vue';
       bottom: 0;
       left: 0;
       img {
-        position: absolute;
-        max-width: max-content;
         top: -100px;
         left: -60px;
         height: 350px;
@@ -136,12 +133,9 @@ import VSectionMapAnimation from './VSectionMapAnimation.vue';
       }
     }
     &_description {
-      display: flex;
-      flex-direction: column;
       align-items: center;
       text-align: center;
       width: 100%;
-      gap: 27px;
       span {
         font-weight: 400;
       }

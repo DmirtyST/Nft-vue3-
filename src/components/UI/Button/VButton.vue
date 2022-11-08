@@ -46,7 +46,32 @@ const props = defineProps({
   letter-spacing: 0.07em;
   background: #c2e978;
   border-radius: 10px;
-
+  overflow: hidden;
+  position: relative;
+  z-index: 22;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1.5em;
+    background-color: rgba(white, 0.6);
+    transform: translateX(-4em) skewX(-45deg);
+    left: 0;
+    top: 0;
+  }
+  &:hover {
+    &::before {
+      animation: move-light 1s;
+    }
+  }
+  @keyframes move-light {
+    from {
+      transform: translateX(-4em) skewX(-45deg);
+    }
+    to {
+      transform: translateX(25em) skewX(-45deg);
+    }
+  }
   &_svg {
     margin-top: 4px;
   }

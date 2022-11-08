@@ -1,5 +1,5 @@
 <template>
-  <section class="screen">
+  <section id="#home" class="screen">
     <div class="screen_row">
       <img class="screen-row_img" :src="screenBg" alt="" />
       <VSectionScreenAnimate />
@@ -163,9 +163,6 @@ import VSectionScreenAnimate from './VSectionScreenAnimate.vue';
       }
 
       &_title {
-        font-size: 76px;
-        line-height: 90px;
-        margin-bottom: 30px;
         padding-left: 0px;
       }
     }

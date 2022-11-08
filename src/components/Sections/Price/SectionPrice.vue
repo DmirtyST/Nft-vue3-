@@ -176,32 +176,16 @@ import priceResult from '../../Image/priceResult.png';
     &_box {
       min-height: auto;
       padding: 20px 0;
-      background-color: #1d201a;
-      display: flex;
-      flex-direction: column;
       align-items: center;
     }
     &-box {
       &_row {
-        display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 30px;
-        align-items: center;
-        height: 100%;
       }
 
       &_image {
-        position: relative;
         width: 100%;
-        height: 108px;
-
-        img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
       }
     }
   }
