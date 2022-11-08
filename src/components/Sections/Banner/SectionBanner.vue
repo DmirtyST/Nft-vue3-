@@ -19,7 +19,9 @@
             <span> We tokenized</span> each seedling (the future mighty and evergreen
             tree) <span>and made an NFT</span> token out of it.
           </VTypography>
-          <VButton color="minimal">buy sequoia tree</VButton>
+          <div class="banner_btn">
+            <VButton color="minimal">buy sequoia tree</VButton>
+          </div>
         </div>
       </div>
     </VContainer>
@@ -120,6 +122,9 @@ import BannerImg from '../../Image/bannerImage.png';
     height: auto;
     padding-top: 20px;
     padding-bottom: 40px;
+    &_btn {
+      margin-top: 20px;
+    }
     &_row {
       display: flex;
       justify-content: center;
