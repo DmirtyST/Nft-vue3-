@@ -19,8 +19,17 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 }
-  },
+    if (to.hash) {
+        return ({
+            el: to.hash,
+            behavior: 'smooth',
+        })
+    } else if (savedPosition) {
+        return (savedPosition);
+    } else {
+        return {left: 0, top: 0}
+    }
+},
 });
 
 export default router;

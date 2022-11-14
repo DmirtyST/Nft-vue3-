@@ -1,6 +1,6 @@
 <template>
   <VContainer width="1128">
-    <div class="tokenomics">
+    <div id="tokemonics" class="tokenomics">
       <VContainer width="950">
         <div class="tokenomics_row">
           <div class="tokenomics_title">
@@ -47,64 +47,64 @@
 </template>
 
 <script setup>
-import VContainer from '../../UI/Container/VContainer.vue';
-import VHtag from '../../UI/Htag/VHtag.vue';
-import VTypography from '../../UI/Typography/VTypography.vue';
+  import VContainer from '../../UI/Container/VContainer.vue';
+  import VHtag from '../../UI/Htag/VHtag.vue';
+  import VTypography from '../../UI/Typography/VTypography.vue';
 </script>
 
 <style lang="scss" scoped>
-.tokenomics {
-  min-height: 400px;
-  background: linear-gradient(180deg, #131624 0%, #191d2e 100%);
-  padding: 60px 0;
-  position: relative;
-  margin-bottom: 30px;
-  &_row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 50px;
-  }
+  .tokenomics {
+    min-height: 400px;
+    background: linear-gradient(180deg, #131624 0%, #191d2e 100%);
+    padding: 60px 0;
+    position: relative;
+    margin-bottom: 30px;
+    &_row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 50px;
+    }
 
-  &_content {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  &-content {
-    &_list {
+    &_content {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: PlayfairDisplay;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 24px;
-      margin-bottom: 7px;
-      color: #ffffff;
-      &_number {
-        color: #c2e978;
-        font-size: 15px;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &-content {
+      &_list {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: PlayfairDisplay;
+        font-size: 20px;
         font-weight: 400;
-        line-height: 22px;
-        background-color: #272f30;
-        padding: 1px 8px;
-        border-radius: 10px;
+        line-height: 24px;
+        margin-bottom: 7px;
+        color: #ffffff;
+        &_number {
+          color: #c2e978;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 22px;
+          background-color: #272f30;
+          padding: 1px 8px;
+          border-radius: 10px;
+        }
       }
     }
   }
-}
 
-@media (max-width: 800px) {
-  .tokenomics {
-    min-height: auto;
-    padding: 40px 0;
-    margin-bottom: 50px;
-    &_row {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+  @media (max-width: 800px) {
+    .tokenomics {
+      min-height: auto;
+      padding: 40px 0;
+      margin-bottom: 50px;
+      &_row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   }
-}
 </style>

@@ -1,12 +1,12 @@
 <!-- @format -->
 <template>
-  <BaseLeyout>
+  <BaseLayout>
     <router-view />
-  </BaseLeyout>
+  </BaseLayout>
 </template>
 
 <script setup>
-import BaseLeyout from './components/Layout/BaseLayout.vue';
+  import BaseLayout from './components/Layout/BaseLayout.vue';
 </script>
 
 <style lang="scss" scoped></style>
