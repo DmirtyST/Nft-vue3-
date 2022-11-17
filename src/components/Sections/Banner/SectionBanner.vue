@@ -11,7 +11,10 @@
           </VHtag>
         </div>
         <div class="banner_image">
-          <img :src="BannerImg" alt="" />
+          <picture>
+            <source :srcset="BannerImgWebp" />
+            <img :src="BannerImg" alt="bannerimg" />
+          </picture>
         </div>
         <div class="banner_description">
           <VTypography size="lg"> It grows for 2,000 years or more. </VTypography>
@@ -35,6 +38,7 @@
   import VTypography from '../../UI/Typography/VTypography.vue';
   import VButton from '../../UI/Button/VButton.vue';
   import BannerImg from '../../Image/bannerImage.png';
+  import BannerImgWebp from '../../Image/bannerImage.webp';
 </script>
 
 <style lang="scss" scoped>
@@ -92,8 +96,9 @@
       img {
         position: absolute;
         max-width: unset;
-        width: 370px;
-        height: 600px;
+
+        width: 250px;
+        height: 450px;
         top: -200px;
         z-index: 22;
       }
@@ -109,6 +114,7 @@
       align-items: flex-start;
       width: 33%;
       gap: 28px;
+
       span {
         font-style: italic;
         color: #c2e978;
@@ -157,9 +163,9 @@
         height: 250px;
         img {
           top: -0;
-          left: 40px;
-          width: 250px;
-          height: 320px;
+          left: 60px;
+          width: 150px;
+          height: 240px;
         }
       }
     }

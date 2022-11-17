@@ -13,7 +13,10 @@
           </VHtag>
         </div>
         <div class="sectionMap_image">
-          <img :src="SectionMapImage" alt="" />
+          <picture>
+            <source :srcset="SectionMapImageWebp" />
+            <img :src="SectionMapImage" alt="mapimg" />
+          </picture>
         </div>
         <div class="sectionMap_description">
           <VTypography size="xl" size-span="xl">
@@ -30,6 +33,7 @@
 <script setup>
   import SectionMapBg from '../../Image/SectionMap.png';
   import SectionMapImage from '../../Image/SectionMapImage.png';
+  import SectionMapImageWebp from '../../Image/SectionMapImage.webp';
   import VButton from '../../UI/Button/VButton.vue';
   import VContainer from '../../UI/Container/VContainer.vue';
   import VHtag from '../../UI/Htag/VHtag.vue';
@@ -67,9 +71,9 @@
         position: absolute;
         max-width: unset;
         top: -70px;
-        left: -120px;
-        height: 540px;
-        width: 550px;
+        left: -70px;
+        height: 362px;
+        width: 345px;
       }
     }
     &_row {

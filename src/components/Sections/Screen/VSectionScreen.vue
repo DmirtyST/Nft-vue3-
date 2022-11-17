@@ -1,7 +1,10 @@
 <template>
   <section id="home" class="screen">
     <div class="screen_row">
-      <img class="screen-row_img" :src="screenBg" alt="bg-home" />
+      <picture>
+        <source :srcset="screenBgWebp" />
+        <img class="screen-row_img" :src="screenBg" alt="bg-home" />
+      </picture>
       <VSectionScreenAnimate />
       <VContainer width="950">
         <div class="screen_item">
@@ -29,6 +32,7 @@
 
 <script setup>
   import screenBg from '../../Image/screen.png';
+  import screenBgWebp from '../../Image/screen.webp';
   import VContainer from '../../UI/Container/VContainer.vue';
   import VSectionScreenAnimate from './VSectionScreenAnimate.vue';
 </script>
