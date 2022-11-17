@@ -9,18 +9,18 @@
 </template>
 
 <script setup>
-import BaseHeader from './BaseHeader.vue';
-import BaseFooter from './BaseFooter.vue';
+  import BaseHeader from './BaseHeader.vue';
+  import BaseFooter from './BaseFooter.vue';
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.page {
-  flex: 1 1 auto;
-}
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .page {
+    flex: 1 1 auto;
+  }
 </style>

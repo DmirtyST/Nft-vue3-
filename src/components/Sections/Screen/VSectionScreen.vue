@@ -188,6 +188,12 @@
   }
   @media (max-width: 425px) {
     .screen {
+      &-titles {
+        &_title {
+          font-size: 55px;
+          line-height: 70px;
+        }
+      }
       &-description {
         &_text {
           padding-left: 20px;
