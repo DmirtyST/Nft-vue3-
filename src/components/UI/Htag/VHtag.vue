@@ -102,6 +102,9 @@
         font-size: 40px;
         line-height: 40px;
       }
+      &_xxl {
+        font-size: 65px;
+      }
     }
 
     .Hsub {
@@ -121,6 +124,9 @@
       &_lg {
         font-size: 32px;
         line-height: 40px;
+      }
+      &_xxl {
+        font-size: 55px;
       }
     }
 
