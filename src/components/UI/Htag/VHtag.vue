@@ -111,4 +111,28 @@
       }
     }
   }
+
+  @media (max-width: 425px) {
+    .Htag {
+      &_xl {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      &_lg {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+
+    .Hsub {
+      &_xl {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      &_lg {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+  }
 </style>

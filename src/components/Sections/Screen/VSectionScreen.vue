@@ -195,8 +195,11 @@
         }
       }
       &-description {
+        &_title {
+          font-size: 33px;
+        }
         &_text {
-          padding-left: 20px;
+          padding-left: 0px;
 
           &:last-child {
             display: none;
